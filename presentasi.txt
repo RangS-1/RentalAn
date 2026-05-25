@@ -1,0 +1,428 @@
+==============================================================================
+                        PRESENTASI PROJECT APLIKASI RENTAL
+                              4 ANGGOTA TIM
+==============================================================================
+
+TIM:
+1. [TECH LEAD] - Koordinator & Penjelasan Umum
+2. [FRONT-END 1] - Interface User & Fitur User
+3. [FRONT-END 2] - Interface Admin & Dashboard
+4. [BACK-END] - Database & Sistem Backend
+
+==============================================================================
+1. TECH LEAD - PENGENALAN UMUM PROJECT
+==============================================================================
+
+Assalamu'alaikum, selamat siang teman-teman. Nama saya [NAMA], sebagai Tech Lead 
+dalam project ini.
+
+Hari ini saya akan memperkenalkan project kami yang bernama "RENTAL APLIKASI" - 
+sebuah sistem aplikasi web untuk manajemen penyewaan barang secara digital.
+
+VISI PROJECT:
+Aplikasi ini dirancang untuk memudahkan proses penyewaan barang dengan sistem yang 
+terstruktur dan mudah digunakan oleh pengguna umum maupun admin.
+
+FITUR-FITUR UTAMA:
+1. Sistem Autentikasi (Login & Register)
+2. Dashboard User untuk melihat riwayat penyewaan
+3. Dashboard Admin untuk manajemen barang dan pengguna
+4. Sistem Peminjaman dan Pengembalian
+5. Manajemen Inventori Barang
+
+TEKNOLOGI YANG DIGUNAKAN:
+- Frontend: HTML, CSS, JavaScript
+- Backend: PHP
+- Database: MySQL
+- Architecture: Object-Oriented Programming (OOP)
+
+PROJECT STRUCTURE:
+- Folder 'classes/' untuk class-class backend (Database, User, Item, Rental)
+- Folder 'admin/' untuk halaman admin
+- Folder 'user/' untuk halaman user
+- Folder 'assets/' untuk CSS dan JavaScript
+- Folder 'includes/' untuk file konfigurasi
+
+Tim kami terdiri dari 4 orang dengan spesialisasi yang berbeda:
+- 2 orang Front-End Developer menangani UI/UX dan interface
+- 1 orang Back-End Developer menangani logika sistem dan database
+- Saya sebagai Tech Lead mengkoordinasikan dan memastikan integrasi sempurna
+
+Sekarang, saya akan memberikan kesempatan kepada rekan-rekan kami untuk menjelaskan 
+bagian masing-masing. Mari kita mulai dengan Front-End 1.
+
+==============================================================================
+2. FRONT-END 1 - INTERFACE USER & FITUR USER
+==============================================================================
+
+Terima kasih kepada Tech Lead. Nama saya [NAMA], saya adalah Front-End Developer 
+yang fokus pada interface pengguna atau user side.
+
+TANGGUNG JAWAB SAYA:
+Saya bertanggung jawab mengembangkan tampilan dan fungsionalitas untuk pengguna 
+akhir yang menyewa barang.
+
+HALAMAN-HALAMAN YANG SAYA BUAT:
+
+1. HALAMAN LOGIN (login.php)
+   - Form untuk login dengan username/email dan password
+   - Validasi input di frontend
+   - Error message jika login gagal
+   - Link ke halaman register untuk pengguna baru
+
+2. HALAMAN REGISTER (register.php)
+   - Form untuk registrasi pengguna baru
+   - Input: nama, email, password, konfirmasi password
+   - Validasi form sebelum submit
+   - Error handling dan success message
+
+3. DASHBOARD USER (user/dashboard.php)
+   - Menampilkan ringkasan informasi pengguna
+   - Quick access ke fitur-fitur utama
+   - Notifikasi penting
+   - Tombol navigasi ke halaman-halaman lain
+
+4. HALAMAN MY RENTALS (user/my_rentals.php)
+   - Menampilkan daftar barang yang sedang disewa
+   - Menampilkan history penyewaan yang sudah selesai
+   - Status penyewaan (aktif, selesai, pending)
+   - Tanggal peminjaman dan pengembalian
+   - Option untuk extend rental atau return barang
+
+5. HALAMAN ACCOUNT (user/account.php)
+   - Profil pengguna dengan informasi lengkap
+   - Edit profil (nama, email, telepon, alamat)
+   - Ubah password
+   - Logout button
+
+FITUR-FITUR FRONTEND:
+- Responsive design untuk desktop dan mobile
+- Form validation menggunakan JavaScript
+- User-friendly interface dengan navigasi yang jelas
+- Loading indicator untuk proses asynchronous
+- Toast notification untuk feedback ke user
+
+TEKNOLOGI YANG DIGUNAKAN:
+- HTML5 untuk struktur
+- CSS3 untuk styling dan responsive design
+- JavaScript untuk interaktivitas dan validasi
+
+File-file yang saya kelola:
+- assets/css/style.css (styling)
+- assets/js/app.js (javascript logic)
+- index.html (halaman home)
+
+Dengan interface yang user-friendly ini, pengguna dapat dengan mudah menyewa barang 
+dan mengelola penyewaan mereka. Sekarang saya serahkan kepada rekan Front-End 2 
+untuk menjelaskan interface admin.
+
+==============================================================================
+3. FRONT-END 2 - INTERFACE ADMIN & DASHBOARD ADMIN
+==============================================================================
+
+Terima kasih. Nama saya [NAMA], saya adalah Front-End Developer yang kedua, 
+fokus pada interface admin.
+
+TANGGUNG JAWAB SAYA:
+Saya mengembangkan tampilan dan fungsionalitas untuk admin yang mengelola sistem 
+penyewaan.
+
+HALAMAN-HALAMAN ADMIN YANG SAYA BUAT:
+
+1. ADMIN DASHBOARD (admin/dashboard.php)
+   - Overview statistik sistem
+   - Total pengguna terdaftar
+   - Total barang dalam inventori
+   - Jumlah transaksi/penyewaan aktif
+   - Chart/grafik untuk visualisasi data
+   - Quick action buttons
+   - Recent activity log
+
+2. HALAMAN MANAJEMEN BARANG (admin/items.php)
+   - Tabel daftar semua barang dengan kategori
+   - Informasi: nama barang, stok, harga rental, status
+   - Button untuk Add/Edit/Delete barang
+   - Search dan filter fitur
+   - Sort berdasarkan kolom tertentu
+
+3. HALAMAN MANAJEMEN PENGGUNA (admin/users.php)
+   - Tabel daftar semua pengguna terdaftar
+   - Informasi: nama, email, tanggal registrasi, status
+   - Fitur untuk view detail pengguna
+   - Option untuk deaktifkan/aktivkan akun
+   - Search pengguna
+
+4. HALAMAN KONFIRMASI PEMINJAMAN (admin/confirm_borrow.php)
+   - Daftar request peminjaman dari pengguna
+   - Detail barang yang diminta
+   - Informasi pengguna yang meminjam
+   - Button untuk approve atau reject
+   - Catatan untuk alasan penolakan
+
+5. HALAMAN KONFIRMASI PENGEMBALIAN (admin/confirm_return.php)
+   - Daftar pengembalian barang
+   - Detail barang yang dikembalikan
+   - Informasi peminjam
+   - Kondisi barang saat dikembalikan
+   - Button untuk confirm atau reject return
+
+FITUR-FITUR ADMIN INTERFACE:
+- Navigation menu yang terstruktur
+- Role-based access control indication
+- Data table dengan pagination
+- Export data ke format lain (CSV/PDF)
+- Confirmation dialog untuk aksi sensitif
+- Admin profile dan logout
+
+DESAIN INTERFACE:
+- Dashboard dengan layout yang clean dan professional
+- Color scheme yang konsisten
+- Icon dan badge untuk visual clarity
+- Breadcrumb untuk navigasi
+- Responsive untuk berbagai ukuran layar
+
+Interface admin ini dirancang untuk efisiensi dan kemudahan dalam mengelola 
+sistem penyewaan. Sekarang saya serahkan ke rekan Back-End Developer untuk 
+menjelaskan sistem backend kami.
+
+==============================================================================
+4. BACK-END DEVELOPER - SISTEM DATABASE & BACKEND
+==============================================================================
+
+Terima kasih. Nama saya [NAMA], saya adalah Back-End Developer dalam project ini.
+
+TANGGUNG JAWAB SAYA:
+Saya menangani logika bisnis, sistem autentikasi, database, dan semua proses 
+backend yang mendukung aplikasi ini.
+
+STRUKTUR CLASS BACKEND:
+
+1. DATABASE CLASS (classes/Database.php)
+   - Mengelola koneksi ke database MySQL
+   - Query builder untuk insert, update, delete, select
+   - Prepared statement untuk keamanan SQL Injection
+   - Error handling dan logging
+   - Connection pooling jika diperlukan
+
+2. USER CLASS (classes/User.php)
+   - Register pengguna baru dengan validasi
+   - Login dengan verifikasi password (hashing)
+   - Mendapatkan informasi user dari database
+   - Update profil pengguna
+   - Ubah password dengan verifikasi password lama
+   - Session management
+
+3. ITEM CLASS (classes/Item.php)
+   - CRUD operation untuk barang
+   - Tambah barang baru ke inventori
+   - Update informasi barang
+   - Delete barang (soft delete)
+   - Tampilkan daftar barang
+   - Cek ketersediaan barang
+
+4. RENTAL CLASS (classes/Rental.php)
+   - Create rental/penyewaan baru
+   - Update status penyewaan
+   - Track tanggal peminjaman dan pengembalian
+   - Hitung biaya rental
+   - Histori penyewaan pengguna
+   - Late fee calculation jika ada keterlambatan
+
+DATABASE SCHEMA:
+
+TABLE: users
+- id (INT, Primary Key)
+- nama (VARCHAR)
+- email (VARCHAR, UNIQUE)
+- password (VARCHAR, hashed)
+- telepon (VARCHAR)
+- alamat (TEXT)
+- tanggal_registrasi (TIMESTAMP)
+- status (ENUM: active, inactive)
+
+TABLE: items
+- id (INT, Primary Key)
+- nama_barang (VARCHAR)
+- deskripsi (TEXT)
+- kategori (VARCHAR)
+- stok (INT)
+- harga_rental_per_hari (DECIMAL)
+- kondisi (ENUM: baik, rusak ringan, rusak berat)
+- tanggal_ditambahkan (TIMESTAMP)
+
+TABLE: rentals
+- id (INT, Primary Key)
+- user_id (INT, Foreign Key)
+- item_id (INT, Foreign Key)
+- tanggal_peminjaman (DATE)
+- tanggal_pengembalian_rencana (DATE)
+- tanggal_pengembalian_aktual (DATE, nullable)
+- total_harga (DECIMAL)
+- status (ENUM: pending, approved, rejected, returned, overdue)
+
+FITUR-FITUR BACKEND:
+
+1. AUTENTIKASI & SECURITY
+   - Password hashing menggunakan bcrypt atau password_hash()
+   - Session management yang aman
+   - CSRF protection pada form
+   - Input validation dan sanitization
+   - SQL Injection prevention dengan prepared statement
+
+2. LOGIKA BISNIS
+   - Validasi ketersediaan barang sebelum rental
+   - Kalkulasi biaya berdasarkan durasi
+   - Auto-update status rental
+   - Late fee handling
+   - Notification system
+
+3. ERROR HANDLING
+   - Try-catch untuk exception handling
+   - Logging ke file untuk debugging
+   - User-friendly error messages
+   - Database error management
+
+4. API ENDPOINTS (jika ada)
+   - GET /api/items - Daftar barang
+   - POST /api/rentals - Buat rental baru
+   - GET /api/user/rentals - Riwayat rental user
+   - POST /api/confirm-return - Konfirmasi pengembalian
+
+FILE KONFIGURASI (includes/config.php):
+- Database connection settings
+- Global constants
+- Helper functions
+- Session initialization
+
+PROSES ALUR SISTEM:
+
+1. REGISTRASI USER
+   - Input username, email, password
+   - Backend validasi uniqueness email
+   - Hash password
+   - Simpan ke database
+   - Redirect ke login page
+
+2. LOGIN USER
+   - Input email & password
+   - Query database cari user by email
+   - Verify password dengan hash
+   - Create session jika valid
+   - Redirect ke dashboard
+
+3. PROSES PENYEWAAN
+   - User pilih barang
+   - Input durasi penyewaan
+   - System cek stok barang
+   - Kalkulasi total harga
+   - Create rental record
+   - Kirim notifikasi ke admin
+   - Admin confirm/reject
+   - Update status
+
+4. PENGEMBALIAN BARANG
+   - User request return
+   - Admin confirm return
+   - Cek kondisi barang
+   - Update rental status menjadi 'returned'
+   - Update stok barang
+   - Hitung late fee jika ada
+
+SECURITY MEASURES:
+- Password hashing dengan algorithm yang aman
+- Prepared statements untuk prevent SQL Injection
+- Input validation di backend (bukan hanya frontend)
+- Session timeout untuk security
+- Authorization check sebelum akses data
+
+Dengan sistem backend yang robust ini, aplikasi kami dapat menangani logika bisnis 
+yang kompleks dengan aman dan efisien. 
+
+==============================================================================
+                              PENUTUP
+==============================================================================
+
+[TECH LEAD - BERBICARA KEMBALI]
+
+Terima kasih kepada semua anggota tim yang telah menjelaskan bagian masing-masing:
+
+RINGKASAN PROJECT:
+✓ Front-End yang responsif dan user-friendly
+✓ Interface admin yang comprehensive
+✓ Backend yang robust dan secure
+✓ Database yang well-structured
+✓ Architecture yang scalable
+
+KELEBIHAN PROJECT INI:
+1. Mudah digunakan untuk user dan admin
+2. Sistem keamanan yang baik
+3. Proses yang terstruktur dan efisien
+4. Code yang maintainable dan modular
+5. Dokumentasi yang jelas
+
+TIMELINE DEVELOPMENT:
+- Phase 1: Database design dan backend setup ✓
+- Phase 2: Frontend development (user & admin) ✓
+- Phase 3: Testing dan debugging ✓
+- Phase 4: Deployment ✓
+
+NEXT STEPS:
+- User testing dan feedback collection
+- Performance optimization
+- Scalability improvements
+- Mobile app development (future)
+
+Tim kami telah bekerja keras untuk menghadirkan solusi rental application yang 
+berkualitas. Kami siap untuk melayani kebutuhan penyewaan barang dengan sistem 
+yang modern dan efisien.
+
+Terima kasih atas perhatiannya. Apakah ada pertanyaan?
+
+==============================================================================
+                            SESI TANYA JAWAB
+==============================================================================
+
+[MODERATOR/TECH LEAD]
+
+Mari kita buka sesi tanya jawab. Silakan ajukan pertanyaan terkait project ini.
+
+Pertanyaan yang Mungkin Diajukan:
+
+Q1: Berapa lama waktu yang dibutuhkan untuk develop project ini?
+A: [Tech Lead] Dengan 4 orang tim, project ini dikerjakan selama 4-6 minggu 
+   tergantung kompleksitas fitur tambahan.
+
+Q2: Bagaimana dengan keamanan data user?
+A: [Back-End] Kami menggunakan password hashing, prepared statement, dan CSRF 
+   protection. Data user disimpan dengan aman di database yang terenkripsi.
+
+Q3: Apakah aplikasi ini bisa di-scale ke jumlah user yang lebih besar?
+A: [Tech Lead] Ya, architecture kami modular dan bisa di-scale. Kami bisa 
+   menambahkan caching, load balancing, dan database replication.
+
+Q4: Bagaimana proses deployment?
+A: [Tech Lead] Project ini dideploy di server XAMPP untuk development. Untuk 
+   production, bisa menggunakan shared hosting atau cloud service seperti 
+   AWS, Digital Ocean, atau Heroku.
+
+Q5: Apakah ada fitur notifikasi?
+A: [Back-End] Kami implementasi notifikasi melalui sistem database. Untuk fase 
+   berikutnya, bisa ditambahkan email notification dan push notification.
+
+==============================================================================
+                         TERIMA KASIH
+==============================================================================
+
+Kami mengucapkan terima kasih telah menyimak presentasi project Rental Aplikasi kami.
+
+Untuk informasi lebih lanjut atau collaboration opportunities, silakan hubungi:
+- Tech Lead: [CONTACT]
+- Email: [EMAIL]
+- Repository: [GITHUB URL]
+
+Semoga project ini bermanfaat dan memberikan value yang maksimal untuk kebutuhan 
+sistem penyewaan barang.
+
+Wassalamu'alaikum warahmatullahi wabarakatuh.
+
+==============================================================================
