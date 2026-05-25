@@ -14,7 +14,7 @@ $role = $_SESSION['role'] ?? null;
 <body>
 <nav class="navbar">
   <div class="nav-container">
-    <a href="<?= $base ?><?= $role === 'admin' ? 'admin/dashboard.php' : 'user/dashboard.php' ?>" class="logo">⚡ RentalKu</a>
+    <a href="<?= $base ?><?= $role === 'admin' ? 'admin/dashboard.php' : 'user/dashboard.php' ?>" class="logo">⚡ RentalAn</a>
     <?php if (isset($_SESSION['user_id'])): ?>
       <div class="nav-links">
         <?php if ($role === 'admin'): ?>

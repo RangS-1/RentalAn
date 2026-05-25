@@ -4,5 +4,5 @@ if (isset($_SESSION['user_id'])) {
     header('Location: ' . ($_SESSION['role'] === 'admin' ? 'admin/dashboard.php' : 'user/dashboard.php'));
     exit;
 }
-header('Location: login.php');
+header('Location: index.html');
 exit;

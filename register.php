@@ -26,10 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html><html lang="id"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daftar — RentalKu</title><link rel="stylesheet" href="assets/css/style.css">
+<title>Daftar — RentalAn</title><link rel="stylesheet" href="assets/css/style.css">
 </head><body>
 <div class="auth-wrapper"><div class="auth-card">
-  <h1>⚡ RentalKu</h1>
+  <h1>⚡ RentalAn</h1>
   <h2 style="text-align:center;margin-bottom:20px;color:#6b7280;font-weight:500">Buat akun baru</h2>
   <?php if ($error): ?><div class="alert alert-error"><?= e($error) ?></div><?php endif; ?>
   <?php if ($success): ?><div class="alert alert-success"><?= e($success) ?> <a href="login.php">Masuk &rarr;</a></div><?php endif; ?>

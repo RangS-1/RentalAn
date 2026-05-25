@@ -18,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html><html lang="id"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Masuk — RentalKu</title><link rel="stylesheet" href="assets/css/style.css">
+<title>Masuk — RentalAn</title><link rel="stylesheet" href="assets/css/style.css">
 </head><body>
 <div class="auth-wrapper"><div class="auth-card">
-  <h1>⚡ RentalKu</h1>
+  <h1>⚡ RentalAn</h1>
   <h2 style="text-align:center;margin-bottom:20px;color:#6b7280;font-weight:500">Masuk ke akun Anda</h2>
   <?php if ($error): ?><div class="alert alert-error"><?= e($error) ?></div><?php endif; ?>
   <form method="post">
@@ -30,5 +30,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit" class="btn btn-primary btn-block">Masuk</button>
   </form>
   <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
-  <p style="margin-top:8px;font-size:.8rem;color:#9ca3af">Admin default: <b>admin</b> / <b>admin123</b></p>
 </div></div></body></html>
