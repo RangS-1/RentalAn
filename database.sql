@@ -1,8 +1,8 @@
 -- Database: rental_elektronik
 -- Jalankan file ini di phpMyAdmin atau MySQL CLI
 
-CREATE DATABASE IF NOT EXISTS rental_elektronik CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE rental_elektronik;
+CREATE DATABASE IF NOT EXISTS rentalan CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE rentalan;
 
 -- Tabel users
 CREATE TABLE IF NOT EXISTS users (
