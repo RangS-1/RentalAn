@@ -3,9 +3,14 @@ require_once __DIR__ . '/../includes/config.php';
 requireAdmin();
 $rental = new Rental($db);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm'])) {
-    $rental->confirmReturn((int)$_POST['rental_id']);
-    header('Location: confirm_return.php'); exit;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['confirm'])) {
+        $rental->confirmReturn((int)$_POST['rental_id']);
+        header('Location: confirm_return.php'); exit;
+    } elseif (isset($_POST['reject'])) {
+        $rental->rejectReturn((int)$_POST['rental_id']);
+        header('Location: confirm_return.php'); exit;
+    }
 }
 
 $list = $rental->getPendingReturns();
@@ -35,6 +40,7 @@ include __DIR__ . '/../includes/header.php';
         <form method="post" style="display:inline">
           <input type="hidden" name="rental_id" value="<?= $r['id'] ?>">
           <button name="confirm" value="1" class="btn btn-sm btn-success">✓ Konfirmasi Kembali</button>
+          <button name="reject" value="1" class="btn btn-sm btn-danger">✗ Tolak</button>
         </form>
       </td>
     </tr>

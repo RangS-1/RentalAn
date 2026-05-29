@@ -76,6 +76,16 @@ class Rental {
         }
     }
 
+    public function rejectReturn($rental_id) {
+        $rental = $this->getById($rental_id);
+        if (!$rental || $rental['status'] !== 'pending_return') return false;
+
+        $stmt = $this->conn->prepare(
+            "UPDATE {$this->table} SET status='active', return_admin_id=NULL, money_paid=NULL, money_change=NULL, return_location=NULL, return_requested_at=NULL WHERE id=?"
+        );
+        return $stmt->execute([$rental_id]);
+    }
+
     public function getById($id) {
         $stmt = $this->conn->prepare("SELECT * FROM {$this->table} WHERE id=?");
         $stmt->execute([$id]);
